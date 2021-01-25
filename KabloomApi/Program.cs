@@ -17,9 +17,10 @@ namespace KabloomApi
     {
         static void Main(string[] args)
         {
-            var apiCallTask = ApiHelper.ApiCall(JZzbz5ld2jLv7RU-HDGVfgPHGH-MPKVMjaVDUowBO1w);
+            var apiCallTask = ApiHelper.ApiCall("[JZzbz5ld2jLv7RU-HDGVfgPHGH-MPKVMjaVDUowBO1w]");
             var result = apiCallTask.Result;
             JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+            List<Plant> plantList = JsonConvert.DeserializeObject<List<Plant>>(jsonResponse["results"].ToString());
             // return result;
         }
     }
@@ -27,8 +28,8 @@ namespace KabloomApi
     {
         public static async Task<string>ApiCall(string apiKey)
         {
-            RestClient client = new RestClient ("http address");
-            RestRequest request = new RestRequest($"home.json?api-key={apiKey}"), Method.GET);
+            RestClient client = new RestClient ("https://trefle.io/api/v1");
+            RestRequest request = new RestRequest($"home.json?api-key={apiKey}", Method.GET);
             var response = await client.ExecuteTaskAsync(request);
             return response.Content;
         }
