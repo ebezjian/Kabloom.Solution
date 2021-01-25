@@ -16,16 +16,20 @@ namespace KabloomApi
 {
     public class Program
     {
+        
         static void Main(string[] args)
         {
-            var apiCallTask = ApiHelper.ApiCall("[JZzbz5ld2jLv7RU-HDGVfgPHGH-MPKVMjaVDUowBO1w]");
+            var apiCallTask = ApiHelper.ApiCall("[EnvironmentVariables.ApiKey]");
             var result = apiCallTask.Result;
             JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
             List<Plant> plantList = JsonConvert.DeserializeObject<List<Plant>>(jsonResponse["results"].ToString());
-            // return result;
+            CreateWebHostBuilder(args).Build().Run();
         }
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>();
     }
-    class ApiHelper
+    public class ApiHelper
     {
         public static async Task<string>ApiCall(string apiKey)
         {
