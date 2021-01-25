@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using RestSharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using KabloomApi.Models;
 
 namespace KabloomApi
 {
@@ -29,7 +30,7 @@ namespace KabloomApi
         public static async Task<string>ApiCall(string apiKey)
         {
             RestClient client = new RestClient ("https://trefle.io/api/v1");
-            RestRequest request = new RestRequest($"home.json?api-key={apiKey}", Method.GET);
+            RestRequest request = new RestRequest($"home.json?api-key={EnvironmentVariables.ApiKey}", Method.GET);
             var response = await client.ExecuteTaskAsync(request);
             return response.Content;
         }

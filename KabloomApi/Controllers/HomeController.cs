@@ -7,7 +7,7 @@ namespace KabloomApi.Controllers
   {
     public IActionResult Index()
     {
-      var allPlants = Plant.GetPlants("[JZzbz5ld2jLv7RU-HDGVfgPHGH-MPKVMjaVDUowBO1w]");
+      var allPlants = Plant.GetPlants(EnvironmentVariables.ApiKey);
       return View(allPlants);
     }
   }

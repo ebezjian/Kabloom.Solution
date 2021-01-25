@@ -1,0 +1,15 @@
+@using KabloomApi.Models;
+@model List<KabloomApi.Models.Plant>;
+
+<h1>tesitng plants</h1>
+<ol>
+@foreach (Plant plant in Model)
+{
+  <ul>
+    <li>Image<img src= @plant.image_url></img></li>
+    <li>Common Name: @plant.Common_name</li>
+
+  </ul>
+  <br>
+}
+</ol>
