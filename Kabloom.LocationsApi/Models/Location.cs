@@ -1,15 +1,30 @@
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace KabloomLocationsApi.Models
 {
     public class Location
     {
         public int LocationId { get; set; }
-        [Required]
-        [StringLength(30)]
-        public string LocationName { get; set; }
-        [Required]
-        public string Description { get; set; }
+        public string Name {get;set;}
+        public string Address {get;set;}
+        public string City {get;set;}
+        public string State {get;set;}
+        public string Country {get;set;}
+        public string FormattedAddress {get;set;}
+
+        public static List<Location> GetLocations(string clientId, string clientSecret)
+        {
+            var apiCallTask = ApiHelper.ApiCall(clientId, clientSecret);
+            var result = apiCallTask.Result;
+
+            JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+            List<Location> locationList = JsonConvert.DeserializeObject<List<Location>>(jsonResponse["results"].ToString());
+
+            return locationList;
+        }
 
     }
 }
