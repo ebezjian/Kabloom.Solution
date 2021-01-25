@@ -5,7 +5,7 @@ using Newtonsoft.Json.Linq;
 
 namespace KabloomApi
 {
-  class Plant
+  public class Plant
   {
     public int Id { get; set; }
     public string Common_name { get; set; }
