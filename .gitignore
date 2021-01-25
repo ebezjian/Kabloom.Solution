@@ -5,3 +5,6 @@ EnvironmentVariables.cs
 node_modules/
 coverage/
 dist/
+ignore_this/
+KabloomApi/
+appsettings.json
