@@ -25,36 +25,5 @@ namespace KabloomClient.Controllers
             var thisPlant = Plant.GetDetails(id);
             return View(thisPlant);
         }
-
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Create(Plant plant)
-        {
-            Plant.Post(plant);
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Edit(int id)
-        {
-            var thisPlant = Plant.GetDetails(id);
-            return View(thisPlant);
-        }
-
-        [HttpPost]
-        public IActionResult Edit(Plant plant)
-        {
-            Plant.Put(plant);
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Delete(int id)
-        {
-            Plant.Delete(id);
-            return RedirectToAction("Index");
-        }
     }
 }
