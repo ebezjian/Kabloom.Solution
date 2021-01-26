@@ -1,45 +1,23 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using KabloomLocationsApi.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using KabloomLocationsApi.Models;
 
 namespace KabloomLocationsApi.Controllers
 {
-    public class LocationsController : Controller
+  [Route("api/[controller]")]
+  [ApiController]
+  public class LocationsController : ControllerBase
+  {
+    public ActionResult<List<LocationCallData>> Get()
     {
-     // GET api/locations
-    [HttpGet]
-    public ActionResult<IEnumerable<string>> Get()
-    {
-      return new string[] { "value1", "value2" };
-    }
+      // string Search = "Portland, OR";
+      // LocationCallData callList = LocationCallData.GetVenues(Search);
+      List<LocationCallData> callList = LocationCallData.GetVenues();
+      Console.WriteLine(callList);
 
-    // GET api/locations/
-    [HttpGet("{id}")]
-    public ActionResult<string> Get(int id)
-    {
-      return "value";
+      return callList;
     }
-
-    // POST api/locations
-    [HttpPost]
-    public void Post([FromBody] string value)
-    {
-      
-    }
-
-    // PUT api/locations/
-    [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
-    {
-    }
-
-    // DELETE api/locations/
-    [HttpDelete("{id}")]
-    public void Delete(int id)
-    {
-
-    }
-}
+  }
 }

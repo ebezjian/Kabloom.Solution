@@ -5,3 +5,4 @@ EnvironmentVariables.cs
 node_modules/
 coverage/
 dist/
+appsettings.json
