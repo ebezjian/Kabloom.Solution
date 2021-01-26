@@ -15,12 +15,13 @@ namespace KabloomLocationsApi.Models
         public string Country {get;set;}
         public string FormattedAddress {get;set;}
 
-        public static List<Location> GetLocations(string clientId, string clientSecret)
+        public static List<Location> GetLocations()
         {
-            var apiCallTask = ApiHelper.ApiCall(clientId, clientSecret);
+            var apiCallTask = ApiHelper.ApiCall();
             var result = apiCallTask.Result;
 
             JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+            
             List<Location> locationList = JsonConvert.DeserializeObject<List<Location>>(jsonResponse["results"].ToString());
 
             return locationList;
