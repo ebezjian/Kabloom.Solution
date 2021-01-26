@@ -8,14 +8,6 @@ namespace KabloomLocationsApi.Models
 {
   public class LocationCallData
   {
-    // public int Id { get; set; }
-    public string Name {get;set;}
-    public string Address {get;set;}
-    public string City {get;set;}
-    public string State {get;set;}
-    public string Country {get;set;}
-    public string FormattedAddress {get;set;}
-
     public static List<LocationCallData> GetVenues()
     {
       var apiCallTask = ApiHelper.ApiCall();
@@ -24,5 +16,19 @@ namespace KabloomLocationsApi.Models
       List<LocationCallData> dummy = JsonConvert.DeserializeObject<List<LocationCallData>>(jsonResponse["response"]["venues"].ToString());
       return dummy;
     }
+    public string Name {get; set;}
+    public string Id { get; set; }
+    public Location Location { get; set; }
   }
+
+  public class Location
+  {
+    public string Address {get;set;}
+    public string City {get;set;}
+    public string State {get;set;}
+    public string Country {get;set;}
+    public IList<string> FormattedAddress { get; set; }
+  }
+
+    
 }
