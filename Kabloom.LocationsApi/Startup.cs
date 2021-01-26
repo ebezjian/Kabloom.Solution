@@ -19,7 +19,7 @@ namespace KabloomLocationsApi
             Configuration = configuration;
         }
 
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        // readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         public IConfiguration Configuration { get; }
 
@@ -29,18 +29,18 @@ namespace KabloomLocationsApi
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // Register the Swagger generator, defining 1 or more Swagger documents
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-                c.SwaggerDoc("v2", new OpenApiInfo { Title = "My API", Version = "v2" });
-            });
+            // services.AddSwaggerGen(c =>
+            // {
+            //     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+            //     c.SwaggerDoc("v2", new OpenApiInfo { Title = "My API", Version = "v2" });
+            // });
 
-            services.AddApiVersioning(o =>
-            {
-                o.ReportApiVersions = true;
-                o.AssumeDefaultVersionWhenUnspecified = true;
-                o.DefaultApiVersion = new ApiVersion(1, 0);
-            });
+            // services.AddApiVersioning(o =>
+            // {
+            //     o.ReportApiVersions = true;
+            //     o.AssumeDefaultVersionWhenUnspecified = true;
+            //     o.DefaultApiVersion = new ApiVersion(1, 0);
+            // });
 
         }
 
@@ -57,23 +57,29 @@ namespace KabloomLocationsApi
                 app.UseHsts();
             }
 
-            app.UseCors(MyAllowSpecificOrigins);
+            // app.UseCors(MyAllowSpecificOrigins);
 
             // app.UseHttpsRedirection();
-            app.UseMvc();
-            // Enable middleware to serve generated Swagger as a JSON endpoint.
-            app.UseSwagger(c =>
+            // app.UseMvc();
+            app.UseMvc(routes =>
             {
-                c.SerializeAsV2 = true;
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            // app.UseSwagger(c =>
+            // {
+            //     c.SerializeAsV2 = true;
+            // });
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
             // specifying the Swagger JSON endpoint.
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                c.SwaggerEndpoint("/swagger/v2/swagger.json", "My API V2");
-                c.RoutePrefix = string.Empty;
-            });
+            // app.UseSwaggerUI(c =>
+            // {
+            //     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            //     c.SwaggerEndpoint("/swagger/v2/swagger.json", "My API V2");
+            //     c.RoutePrefix = string.Empty;
+            // });
         }
     }
 }
