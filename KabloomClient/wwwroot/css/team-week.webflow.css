@@ -1,4 +1,4 @@
-﻿.w-form-formradioinput--inputType-custom {
+.w-form-formradioinput--inputType-custom {
   border-top-width: 1px;
   border-bottom-width: 1px;
   border-left-width: 1px;
@@ -949,7 +949,7 @@ h3 {
 }
 
 .body-2 {
-  background-image: url('..../images/pexels-adrianna-calvo-1086178.jpg');
+  background-image: url('../images/pexels-adrianna-calvo-1086178.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
