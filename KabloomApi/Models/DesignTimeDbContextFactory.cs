@@ -5,21 +5,21 @@ using System.IO;
 
 namespace KabloomApi.Models
 {
-	public class KabloomApiContextFactory : IDesignTimeDbContextFactory<KabloomApiContext>
-	{
-		KabloomApiContext IDesignTimeDbContextFactory<KabloomApiContext>.CreateDbContext(string[] args)
-		{
-			IConfigurationRoot configuration = new ConfigurationBuilder()
-				.SetBasePath(Directory.GetCurrentDirectory())
-				.AddJsonFile("appsettings.json")
-				.Build();
+  public class KabloomApiContextFactory : IDesignTimeDbContextFactory<KabloomApiContext>
+  {
+    KabloomApiContext IDesignTimeDbContextFactory<KabloomApiContext>.CreateDbContext(string[] args)
+    {
+      IConfigurationRoot configuration = new ConfigurationBuilder()
+        .SetBasePath(Directory.GetCurrentDirectory())
+        .AddJsonFile("appsettings.json")
+        .Build();
 
-			var builder = new DbContextOptionsBuilder<KabloomApiContext>();
-			var connectionString = configuration.GetConnectionString("DefaultConnection");
+      var builder = new DbContextOptionsBuilder<KabloomApiContext>();
+      var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-			builder.UseMySql(connectionString);
+      builder.UseMySql(connectionString);
 
-			return new KabloomApiContext(builder.Options);
-		}
-	}
+      return new KabloomApiContext(builder.Options);
+    }
+  }
 }
