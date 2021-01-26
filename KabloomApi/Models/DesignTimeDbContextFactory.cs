@@ -11,7 +11,7 @@ namespace KabloomApi.Models
 		{
 			IConfigurationRoot configuration = new ConfigurationBuilder()
 				.SetBasePath(Directory.GetCurrentDirectory())
-				.AddJsonFile("appsettings.json");
+				.AddJsonFile("appsettings.json")
 				.Build();
 
 			var builder = new DbContextOptionsBuilder<KabloomApiContext>();
