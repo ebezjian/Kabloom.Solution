@@ -11,13 +11,15 @@ namespace KabloomApi.Models
     public string Common_name { get; set; }
     public string image_url { get; set; }
 
-    public static List<Plant> GetPlants(string apiKey)
+    public static List<Plant> GetPlants()
     {
-      var apiCallTask = ApiHelper.ApiCall(apiKey);
+      var apiCallTask = ApiHelper.ApiCall();
       var result = apiCallTask.Result;
 
       JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
-      List<Plant> plantList = JsonConvert.DeserializeObject<List<Plant>>(jsonResponse["results"].ToString());
+      
+      Console.WriteLine(jsonResponse);
+      List<Plant> plantList = JsonConvert.DeserializeObject<List<Plant>>(jsonResponse["data"].ToString());
 
       return plantList;
     }
