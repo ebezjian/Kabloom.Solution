@@ -6,9 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace KabloomLocationsApi.Models
 {
-  public class Location
+  public class LocationCallData
   {
-    public int LocationId { get; set; }
+    // public int Id { get; set; }
     public string Name {get;set;}
     public string Address {get;set;}
     public string City {get;set;}
@@ -16,24 +16,13 @@ namespace KabloomLocationsApi.Models
     public string Country {get;set;}
     public string FormattedAddress {get;set;}
 
-    // public static List<Location> GetLocations()
-    // {
-      // var apiCallTask = ApiHelper.ApiCall();
-      // var result = apiCallTask.Result;
-
-			// Location location = new Location();
-			// location.Name = "one";
-			// location.LocationId = 7;
-			// string result = JsonConvert.SerializeObject(location);
-
-			// JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
-
-			// Console.WriteLine(jsonResponse);
-			// Console.WriteLine(jsonResponse["Name"]);
-
-			// List<Location> dummy = JsonConvert.DeserializeObject<List<Location>>(jsonResponse["response.venues"].ToString());
-			// return dummy;
-    // }
-
+    public static List<LocationCallData> GetVenues()
+    {
+      var apiCallTask = ApiHelper.ApiCall();
+      var result = apiCallTask.Result;
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      List<LocationCallData> dummy = JsonConvert.DeserializeObject<List<LocationCallData>>(jsonResponse["response"]["venues"].ToString());
+      return dummy;
+    }
   }
 }
