@@ -10,6 +10,16 @@
 <hr />
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
 {
+    @Html.LabelFor(user => user.UserName, new { @class = "helper"})
+    <br>
+    @Html.TextBoxFor(user => user.UserName, new { @class = "helper"})
+    <br>
+    <br>
+    @Html.LabelFor(user => user.UserRegion, new { @class = "helper"})
+    <br>
+    @Html.TextBoxFor(user => user.UserRegion, new { @class = "helper"})
+    <br>
+    <br>    
     @Html.LabelFor(user => user.Email, new { @class = "helper"})
     <br>
     @Html.TextBoxFor(user => user.Email, new { @class = "helper"})

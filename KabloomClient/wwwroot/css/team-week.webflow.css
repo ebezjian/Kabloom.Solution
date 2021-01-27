@@ -455,25 +455,25 @@ h3 {
 .locations {
   margin-bottom: 16px;
   border-radius: 7px;
-  background-image: radial-gradient(circle farthest-corner at 50% 50%, rgba(0, 0, 0, 0.34), #fff);
+  background-image: radial-gradient( rgba(0, 0, 0, 0.34), #fff);
 }
 
 .plantdatabase {
   margin-bottom: 16px;
   border-radius: 7px;
-  background-image: radial-gradient(circle farthest-corner at 50% 50%, rgba(0, 0, 0, 0.34), #fff);
+  background-image: radial-gradient( rgba(0, 0, 0, 0.34), #fff);
 }
 
 .regionid {
   margin-bottom: 16px;
   border-radius: 7px;
-  background-image: radial-gradient(circle farthest-corner at 50% 50%, rgba(0, 0, 0, 0.34), #fff);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.34), #fff);
 }
 
 .nameid {
   margin-bottom: 16px;
   border-radius: 7px;
-  background-image: radial-gradient(circle farthest-corner at 50% 50%, rgba(0, 0, 0, 0.34) 7%, #fff);
+  background-image: radial-gradient(rgba(0, 0, 0, 0.34) 7%, #fff);
 }
 
 .grid {

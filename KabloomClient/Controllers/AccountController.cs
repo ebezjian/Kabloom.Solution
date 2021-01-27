@@ -32,7 +32,7 @@ namespace KabloomClient.Controllers
         [HttpPost]
         public async Task<ActionResult> Register (RegisterViewModel model)
         {
-        var user = new ApplicationUser { UserName = model.Email };
+        var user = new ApplicationUser { UserName = model.UserName };
         IdentityResult result = await _userManager.CreateAsync(user, model.Password);
         if (result.Succeeded)
         {
@@ -40,7 +40,7 @@ namespace KabloomClient.Controllers
         }
         else
         {
-            return View();
+            return View("UnsuccessfulRegister");
         }
         }
 
@@ -59,7 +59,7 @@ namespace KabloomClient.Controllers
         }
         else
         {
-            return View();
+            return View("UnsuccessfulLogin");
         }
         }
 
