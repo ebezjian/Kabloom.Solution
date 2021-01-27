@@ -1,7 +1,11 @@
+@{
+  Layout = "_Layout";
+}
 
 @using KabloomClient.ViewModels
 
 @model LoginViewModel
+
 
 <h2>Login with your account:</h2>
 <hr />
@@ -9,9 +13,11 @@
 {
   @Html.LabelFor(m => m.Email)
   @Html.TextBoxFor(m => m.Email)
-
+  <br>
+  <br>
   @Html.LabelFor(m => m.Password)
   @Html.PasswordFor(m => m.Password)
-
+  <br>
+  <br>
   <input type="submit" value="Log in" class="btn btn-default" />
 }

@@ -1,0 +1,49 @@
+@media screen and (min-width: 50rem) {
+  .container {
+    margin: auto;
+    padding: 1rem;
+    max-width: 60rem;
+  }
+
+  body {
+    background-image:url('../images/floral-background.jpg');
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    object-fit: contain;
+    background-attachment: fixed;
+  }
+
+  .jumbotron {
+    background-image:url(https://st4.depositphotos.com/1719616/23282/v/600/depositphotos_232827494-stock-video-white-brick-wall-background.jpg);
+    border: 12px black;
+    padding: 34px;
+    box-sizing: border-box;
+    position: relative;
+    color: darkblue;
+    top: 200px;
+    right: 50px;
+    border-style: groove;
+    border-radius: 0 0 85% 85% / 30%;
+  }
+
+  .btn-default {
+    background: lightblue;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 15px;
+    display: block;
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+  }
+}
