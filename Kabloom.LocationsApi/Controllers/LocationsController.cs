@@ -12,12 +12,16 @@ namespace KabloomLocationsApi.Controllers
   {
     public ActionResult<List<LocationCallData>> Get()
     {
-      // string Search = "Portland, OR";
-      // LocationCallData callList = LocationCallData.GetVenues(Search);
-      List<LocationCallData> callList = LocationCallData.GetVenues();
-      Console.WriteLine(callList);
-
-      return callList;
+      // if (searchLocation != null)
+      // {
+        List<LocationCallData> callList = LocationCallData.GetVenues();
+        Console.WriteLine(callList);
+        return callList;  
+      // }
+      // else
+      // {
+      //   return null;
+      // }
     }
   }
 }

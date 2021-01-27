@@ -29,6 +29,4 @@ namespace KabloomLocationsApi.Models
     public string Country {get;set;}
     public IList<string> FormattedAddress { get; set; }
   }
-
-    
 }

@@ -10,9 +10,9 @@ using Microsoft.Extensions.Logging;
 using RestSharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using KabloomApi.Models;
+using KabloomTrefleApi.Models;
 
-namespace KabloomApi
+namespace KabloomTrefleApi
 {
     public class Program
     {

@@ -12,6 +12,13 @@ namespace KabloomClient.Models
     //   var response = await client.ExecuteTaskAsync(request);
     //   return response.Content;
     // }
+    public static async Task<string> GetLocation()
+    {
+      RestClient client = new RestClient("http://localhost:5000/api/locations");
+      RestRequest request = new RestRequest($"Seattle, WA", Method.GET);
+      var response = await client.ExecuteTaskAsync(request);
+      return response.Content;
+    }
     public static async Task<string> GetAll()
     {
       RestClient client = new RestClient("http://localhost:5000/api");

@@ -12,8 +12,8 @@ namespace KabloomLocationsApi.Models
       string clientId = $"client_id={EnvironmentVariables.ClientId}";
       string clientSecret = $"&client_secret={EnvironmentVariables.ClientSecret}";
       string versionByDate = "&v=20210125";
-      // string nearLocation = $"&near={Search}";
-      string nearLocation = $"&near=Portland, OR";
+      // string nearLocation = $"&near={searchLocation}";
+      string nearLocation = $"&near=Vancouver, WA";
       string intent = "&intent=browse";
       string radius = "&radius=10000";
       string limit = "&limit=5";

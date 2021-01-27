@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using RestSharp;
 using System;
 
-namespace KabloomApi.Models
+namespace KabloomTrefleApi.Models
 {
   class ApiHelper
   {

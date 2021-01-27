@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace KabloomApi.Models
+namespace KabloomTrefleApi.Models
 {
   public class Plant
   {
@@ -25,8 +25,6 @@ namespace KabloomApi.Models
     public string Bloom_months { get; set; }
     public string Growth_months { get; set; }
     public string Growth_rate { get; set; }
-    
-    public virtual ApplicationUser User { get; set; }
 
     public static List<Plant> GetPlants()
     {

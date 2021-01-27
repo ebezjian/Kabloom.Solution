@@ -1,3 +1,4 @@
+
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Tue Jan 26 2021 23:47:54 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="600f645f221b5661d38f8688" data-wf-site="600daa2418b4568e22d87ea3">
@@ -19,6 +20,7 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
 <body>
+
   <div class="w-row">
     <div class="column w-col w-col-3 w-col-small-6 w-col-tiny-6">
       <div class="nameid">
@@ -49,15 +51,17 @@
           </div>
           <p>Here is a collection of your chosen plants. Clicking on each which go into greater detail about taking proper care for them.</p>
         </div>
+        @foreach (Plant plant in Model)
+        {
         <div class="card-wrapper">
           <div data-w-id="394a9fbc-bf31-ea15-c0cd-7bd30ac59bf6" class="card">
-            <div class="card-front"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" height="" width="230" alt="" class="image">
-              <h2 class="name">Heading</h2>
+            <div class="card-front"><img src="@plant.image_url" loading="lazy" height="" width="230" alt="" class="image">
+              <h2 class="name">@plant.Common_name</h2>
             </div>
             <div class="card-back">
-              <h1 class="heading-3">Heading</h1>
+              <h1 class="heading-3">@plant.Common_name</h1>
               <ul role="list" class="w-list-unstyled">
-                <li class="list-item-4"></li>
+                <li class="list-item-4">@plant.Color</li>
                 <li class="list-item-3"></li>
                 <li class="list-item-2"></li>
                 <li class="list-item-2"></li>
@@ -71,6 +75,7 @@
             </div>
           </div>
         </div>
+        }
       </section>
     </div>
   </div>

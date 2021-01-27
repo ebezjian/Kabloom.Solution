@@ -9,11 +9,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using KabloomApi.Models;
+using KabloomTrefleApi.Models;
 using Microsoft.AspNetCore.Identity;
 
 
-namespace KabloomApi
+namespace KabloomTrefleApi
 {
   public class Startup
   {
@@ -31,14 +31,6 @@ namespace KabloomApi
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-      services.AddEntityFrameworkMySql()
-      .AddDbContext<KabloomApiContext>(options => options
-      .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
-
-      services.AddIdentity<ApplicationUser, IdentityRole>()
-            .AddEntityFrameworkStores<KabloomApiContext>()
-            .AddDefaultTokenProviders();
 
       services.Configure<IdentityOptions>(options =>
         {
