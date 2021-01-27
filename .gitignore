@@ -1,8 +1,8 @@
 bin
 obj
 .vscode
-EnvironmentVariables.cs
+# EnvironmentVariables.cs
 node_modules/
 coverage/
 dist/
-appsettings.json
+# appsettings.json

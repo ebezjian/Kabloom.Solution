@@ -3,8 +3,8 @@ using KabloomTrefleApi.Models;
 
 namespace KabloomTrefleApi.Controllers
 {
-  [Route("api/[controller]")]
-  [ApiController]
+  // [Route("api/[controller]")]
+  // [ApiController]
   public class PlantsController : Controller //maybe ControllerBase?
   {
     public IActionResult Index()

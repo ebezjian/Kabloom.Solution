@@ -2,16 +2,16 @@
 
 <p align="center">
     <br>
-        <a href="">
-        <img style="border-radius: 100%; height: 50px; width: auto" src="">
+        <a href="https://github.com/ebezjian">
+        <img style="border-radius: 100%; height: 50px; width: auto" src="https://avatars.githubusercontent.com/u/49379604?s=460&u=28a995564e8709eb7ba2d8f7a4e0165562a37cd3&v=4">
     </a>
         <br>
-        <a href="">
-        <img style="border-radius: 100%; height: 50px; width: auto" src="">
+        <a href="https://github.com/SarahGilbert064">
+        <img style="border-radius: 100%; height: 50px; width: auto" src="https://avatars.githubusercontent.com/u/72630313?s=460&u=12fb92750dc134aacbae9ad21fc39442a9dc19ee&v=4">
     </a>
         <br>
-        <a href="">
-        <img style="border-radius: 100%; height: 50px; width: auto" src="">
+        <a href="https://github.com/grand-scheme">
+        <img style="border-radius: 100%; height: 50px; width: auto" src="https://avatars.githubusercontent.com/u/72650879?s=460&u=8ecf4ccb9ac936e6108d17da3e725ad2bae185a2&v=4">
     </a>
     <br>
         <a href="https://github.com/GarrettBrown-dev">
@@ -31,7 +31,9 @@
 |------|----------------|
 
 
-
+|[Ellie Lambert] () | [ebezjian](https://github.com/ebezjian) |
+|[Sarah Gilbert] (https://www.linkedin.com/in/sarahgilbertpdx/) | [SarahGilbert064](https://github.com/SarahGilbert064) |
+|[Shannon Grantski] () | [grand-scheme](https://github.com/grand-scheme) |
 |[Garrett Brown](https://www.linkedin.com/in/garrett-brown-d/) |[GarrettBrown-dev](https://github.com/GarrettBrown-dev) |
 
 # ℹ️ Description
@@ -177,4 +179,4 @@ https://localhost:5000/api/plant/?plantname=bob&plantid=3
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2021 
+Copyright (c) 2021 **_{Ellie Lambert}_**, **_{Sarah Gilbert}_**, **_{Shannon Grantski}_** and **_{Garrett Brown}_**
