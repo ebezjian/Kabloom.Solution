@@ -60,14 +60,14 @@ namespace KabloomClient.Models
     //   request.AddHeader("Content-Type", "application/json");
     //   var response = await client.ExecuteTaskAsync(request);
     // }
-  public static async Task<string> FourSquareCall()
+    public static async Task<string> FourSquareCall(string searchLocation)
     {
       string url = "https://api.foursquare.com/v2/venues/";
       string clientId = $"client_id={EnvironmentVariables.FourSquareId}";
       string clientSecret = $"&client_secret={EnvironmentVariables.FourSquareSecret}";
       string versionByDate = "&v=20210125";
-      // string nearLocation = $"&near={searchLocation}";
-      string nearLocation = $"&near=Vancouver, WA";
+      string nearLocation = $"&near={searchLocation}";
+      // string nearLocation = $"&near=Vancouver, WA";
       string intent = "&intent=browse";
       string radius = "&radius=10000";
       string limit = "&limit=5";

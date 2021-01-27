@@ -6,15 +6,15 @@ using KabloomClient.Models;
 
 namespace KabloomClient.Controllers
 {
-  [Route("api/[controller]")]
+  [Route("api/[controller]/{searchLocation}")]
   [ApiController]
   public class LocationsController : ControllerBase
   {
-    public ActionResult<List<LocationCallData>> GetLocations()
+    public ActionResult<List<LocationCallData>> GetLocations(string searchLocation)
     {
-        List<LocationCallData> callList = LocationCallData.GetVenues();
-        Console.WriteLine(callList);
-        return callList;
+      List<LocationCallData> callList = LocationCallData.GetVenues2(searchLocation);
+      Console.WriteLine(callList);
+      return callList;
     }
   }
 }
