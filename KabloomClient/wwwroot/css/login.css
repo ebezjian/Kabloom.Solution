@@ -46,4 +46,14 @@
     font-weight: bold;
     color: black;
   }
+
+  .helper {
+    color: rgb(42, 72, 155);
+    text-align: center;
+    /* width: 150px; */
+    font-size: 22px;
+    font-weight: bold;
+
+  }
+
 }
