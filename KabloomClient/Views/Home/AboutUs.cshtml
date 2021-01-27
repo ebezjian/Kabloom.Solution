@@ -4,26 +4,29 @@
 <head>
   <meta charset="utf-8">
   <title>About Us</title>
+  <meta content="About Us" property="og:title">
+  <meta content="About Us" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/team-week.webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/team-week.webflow.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Great Vibes:400","Changa One:400,400italic"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
+  <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
 </head>
 <body class="body-2">
   <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="w-nav">
     <div class="w-container">
       <a href="#" class="w-nav-brand"></a>
       <nav role="navigation" class="w-nav-menu">
-        <a href="#" class="w-nav-link">Home</a>
-        <a href="#" class="w-nav-link">Login</a>
-        <a href="#" class="w-nav-link">Register</a>
+        @* <p>@Html.ActionLink("About Us", "AboutUs")</p> *@
+        <p class="w-nav-link">@Html.ActionLink("Home", "Index", "Home")</p>
+        <p class="w-nav-link">@Html.ActionLink("Login", "Login", "Account")</p>
+        <p class="w-nav-link">@Html.ActionLink("Register", "Register", "Account")</p>
       </nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
@@ -33,7 +36,7 @@
   <div class="w-layout-grid grid-3">
     <section id="feature-section">
       <div data-w-id="fef8d65e-9625-a478-f9db-85605aac6851" style="-webkit-transform:translate3d(0px, -218px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, -218px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, -218px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, -218px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="ellie w-container">
-        <div class="div-block-5"><img src="images/ellie.jpg" width="275" height="450" alt="" class="image-2"></div>
+        <div class="div-block-5"><img src="../images/ellie.jpg" width="275" height="450" alt="" class="image-2"></div>
         <div class="div-block-9">
           <h2 class="heading-4">Ellie Lambert</h2>
           <p class="paragraph-2">The <strong>feature</strong> layout is built with <strong>flex</strong>, like the <strong>hero</strong> layout. Don’t like our typesetting? You can update every detail in the typography section of the Style panel.<br>‍<br>You can also add spacing between the heading and paragraph, swap a video in for the image, or add a button. Just make sure to drop your button into the <strong>div block</strong> that contains this content.</p>
@@ -42,7 +45,7 @@
     </section>
     <section id="feature-section">
       <div data-w-id="54f123b0-06f8-bde9-25f3-dda0bde67776" style="-webkit-transform:translate3d(306px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(306px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(306px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(306px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="sarah w-container">
-        <div class="div-block-6"><img src="images/sarah.jpg" width="300" height="450" sizes="(max-width: 479px) 81vw, 300px"  alt="" class="image-3"></div>
+        <div class="div-block-6"><img src="../images/sarah.jpg" width="300" height="450" sizes="(max-width: 479px) 81vw, 300px"  alt="" class="image-3"></div>
         <div>
           <h2 class="heading-5">Sarah Gilbert</h2>
           <p class="paragraph-3">The <strong>feature</strong> layout is built with <strong>flex</strong>, like the <strong>hero</strong> layout. Don’t like our typesetting? You can update every detail in the typography section of the Style panel.<br>‍<br>You can also add spacing between the heading and paragraph, swap a video in for the image, or add a button. Just make sure to drop your button into the <strong>div block</strong> that contains this content.</p>
@@ -51,7 +54,7 @@
     </section>
     <section id="feature-section">
       <div data-w-id="c2cf97e9-58ef-4283-e875-e4ad052dadd2" style="-webkit-transform:translate3d(-105px, 153px, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-105px, 153px, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-105px, 153px, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-105px, 153px, 0px) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform-style:preserve-3d" class="garret w-container">
-        <div class="div-block-6"><img src="images/garrett2.jpg" width="275" height="" sizes="(max-width: 479px) 81vw, 275px" srcset="images/garrett2-p-500.jpeg 500w, images/garrett2-p-800.jpeg 800w, images/garrett2-p-1080.jpeg 1080w, images/garrett2-p-1600.jpeg 1600w, images/garrett2.jpg 1836w" alt="" class="image-5"></div>
+        <div class="div-block-6"><img src="../images/garrett2.jpg" width="275" height="" sizes="(max-width: 479px) 81vw, 275px"  alt="" class="image-5"></div>
         <div>
           <h2 class="heading-5">Garret Brown</h2>
           <p class="paragraph-3">The <strong>feature</strong> layout is built with <strong>flex</strong>, like the <strong>hero</strong> layout. Don’t like our typesetting? You can update every detail in the typography section of the Style panel.<br>‍<br>You can also add spacing between the heading and paragraph, swap a video in for the image, or add a button. Just make sure to drop your button into the <strong>div block</strong> that contains this content.</p>
@@ -60,7 +63,7 @@
     </section>
     <section id="feature-section">
       <div data-w-id="8d15f7a6-f9f5-e33b-2bc5-76ca2c225233" style="-webkit-transform:translate3d(177px, 161px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(177px, 161px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(177px, 161px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(177px, 161px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="shannon w-container">
-        <div class="div-block-6"><img src="images/shannon2.png" width="275" alt="" class="image-4"></div>
+        <div class="div-block-6"><img src="../images/shannon2.png" width="275" alt="" class="image-4"></div>
         <div>
           <h2 class="heading-5">Shannon Grantski</h2>
           <p class="paragraph-3">The <strong>feature</strong> layout is built with <strong>flex</strong>, like the <strong>hero</strong> layout. Don’t like our typesetting? You can update every detail in the typography section of the Style panel.<br>‍<br>You can also add spacing between the heading and paragraph, swap a video in for the image, or add a button. Just make sure to drop your button into the <strong>div block</strong> that contains this content.</p>
@@ -69,7 +72,7 @@
     </section>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=600daa2418b4568e22d87ea3" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="../js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
