@@ -5,61 +5,25 @@ namespace KabloomClient.Models
 {
   public class ApiHelper
   {
-    // public static async Task<string> ApiCall()
-    // {
-    //   RestClient client = new RestClient($"https://trefle.io/api/v1/plants?token={KabloomTrefleApi.Models.EnvironmentVariables.ApiKey}");
-    //   RestRequest request = new RestRequest(Method.GET);
-    //   var response = await client.ExecuteTaskAsync(request);
-    //   return response.Content;
-    // }
-    public static async Task<string> GetLocation()
+    public static async Task<string> ApiCall()
     {
-      RestClient client = new RestClient("http://localhost:5000/api/locations");
-      RestRequest request = new RestRequest($"Seattle, WA", Method.GET);
-      var response = await client.ExecuteTaskAsync(request);
-      return response.Content;
-    }
-    public static async Task<string> GetAll()
-    {
-      RestClient client = new RestClient("http://localhost:5000/api");
-      RestRequest request = new RestRequest($"destinations", Method.GET);
+      RestClient client = new RestClient($"https://trefle.io/api/v1/plants?token={EnvironmentVariables.ApiKey}");
+      RestRequest request = new RestRequest(Method.GET);
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;
     }
 
-    public static async Task<string> Get(int id)
+    public static async Task<string> GetPlants(string searchString)
     {
-      RestClient client = new RestClient("http://localhost:5000/api");
-      RestRequest request = new RestRequest($"destinations/{id}", Method.GET);
+      // client: https://trefle.io/api/v1/
+      // request for SEARCH BY NAME: plants?token={EnvironmentVariables.ApiKey}&filter[common_name]={SearchString}
+      // request for SPECIFIC PLANT BY #ID: species/{id}?token={EnvironmentVariables.ApiKey}
+      RestClient client = new RestClient($"https://trefle.io/api/v1/");
+      RestRequest request = new RestRequest($"plants?token={EnvironmentVariables.ApiKey}&filter[common_name]={searchString}", Method.GET);
       var response = await client.ExecuteTaskAsync(request);
       return response.Content;
+
     }
-
-    // public static async Task Post(string newDestination)
-    // {
-    //   RestClient client = new RestClient("http://localhost:5000/api");
-    //   RestRequest request = new RestRequest($"destinations", Method.POST);
-    //   request.AddHeader("Content-Type", "application/json");
-    //   request.AddJsonBody(newDestination);
-    //   var response = await client.ExecuteTaskAsync(request);
-    // }
-
-    // public static async Task Put(int id, string newDestination)
-    // {
-    //   RestClient client = new RestClient("http://localhost:5000/api");
-    //   RestRequest request = new RestRequest($"destinations/{id}", Method.PUT);
-    //   request.AddHeader("Content-Type", "application/json");
-    //   request.AddJsonBody(newDestination);
-    //   var response = await client.ExecuteTaskAsync(request);
-    // }
-
-    // public static async Task Delete(int id)
-    // {
-    //   RestClient client = new RestClient("http://localhost:5000/api");
-    //   RestRequest request = new RestRequest($"destinations/{id}", Method.DELETE);
-    //   request.AddHeader("Content-Type", "application/json");
-    //   var response = await client.ExecuteTaskAsync(request);
-    // }
     public static async Task<string> FourSquareCall(string searchLocation)
     {
       string url = "https://api.foursquare.com/v2/venues/";

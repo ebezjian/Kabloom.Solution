@@ -1,4 +1,4 @@
-@ViewBag.Plant;
+@using KabloomClient.Models;
 @model List<KabloomClient.Models.Plant>
 
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
@@ -74,32 +74,32 @@
           <p>Here is a collection of your chosen plants. Clicking on each which go into greater detail about taking
             proper care for them.</p>
         </div>
-        @* @foreach (Plant plant in Model)
-          { *@
+        @foreach (Plant plant in ViewBag.allPlants)
+          {
         <div class="card-wrapper">
           <div data-w-id="394a9fbc-bf31-ea15-c0cd-7bd30ac59bf6" class="card">
-            <div class="card-front"><img src="@ViewBag.image_url" loading="lazy" height="" width="230" alt=""
+            <div class="card-front"><img src="@plant.image_url" loading="lazy" height="" width="230" alt=""
                 class="image">
-              <h2 class="name">@ViewBag.Common_name</h2>
+              <h2 class="name">@plant.Common_name</h2>
             </div>
             <div class="card-back">
-              <h1 class="heading-3">@ViewBag.Common_name</h1>
+              <h1 class="heading-3">@plant.Common_name</h1>
               <ul role="list" class="w-list-unstyled">
-                <li class="list-item-4">@ViewBag.Color</li>
-                <li class="list-item-3">@ViewBag.Edible</li>
-                <li class="list-item-2">@ViewBag.Toxicity</li>
-                <li class="list-item-2">@ViewBag.Minimum_percipitation</li>
-                <li class="list-item-2">@ViewBag.Maximum_percipitation</li>
-                <li class="list-item-2">@ViewBag.Minimum_temperature</li>
-                <li class="list-item-2">@ViewBag.Maximum_temperature</li>
-                <li class="list-item-2">@ViewBag.Bloom_months</li>
-                <li class="list-item-2">@ViewBag.Growth_months</li>
-                <li class="list-item-2">@ViewBag.Growth_rate</li>
+                <li class="list-item-4">@plant.Color</li>
+                <li class="list-item-3">@plant.Edible</li>
+                <li class="list-item-2">@plant.Toxicity</li>
+                <li class="list-item-2">@plant.Minimum_percipitation</li>
+                <li class="list-item-2">@plant.Maximum_percipitation</li>
+                <li class="list-item-2">@plant.Minimum_temperature</li>
+                <li class="list-item-2">@plant.Maximum_temperature</li>
+                <li class="list-item-2">@plant.Bloom_months</li>
+                <li class="list-item-2">@plant.Growth_months</li>
+                <li class="list-item-2">@plant.Growth_rate</li>
               </ul>
             </div>
           </div>
         </div>
-        @* } *@
+        }
       </section>
     </div>
   </div>

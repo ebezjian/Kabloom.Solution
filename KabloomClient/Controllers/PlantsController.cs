@@ -16,13 +16,13 @@ namespace KabloomClient.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.allPlants = Plant.GetPlants();
+            // ViewBag.allPlants = Plant.GetAllPlants();
             return View();
         }
 
-        public IActionResult Details(int id)
+        public IActionResult SearchPlant(string searchString)
         {
-            var thisPlant = Plant.GetDetails(id);
+            var thisPlant = Plant.GetPlants(searchString);
             return View(thisPlant);
         }
     }
