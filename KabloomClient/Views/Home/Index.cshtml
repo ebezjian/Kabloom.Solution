@@ -26,7 +26,7 @@
     <div class="flex-container w-container">
       <div class="div-block">
         <h1 class="heading">Welcome to Kabloom</h1>
-        <p class="paragraph">(name is all inclusive garden planner here to make your life easier when it comes to picking out which plants work best for the space provided.<br><br>As the gardener you will be able to keep track of which plants are in your own garden of eden, be it in an opens pace in your backyard or in your apartment. <br><br>Entirely free service awaits you. All you&#x27;ll have to do is register then log in and you will be provided with a bounty of information to get you going.</p>
+        <p class="paragraph">Kabloom is an all inclusive garden planner here to make your life easier when it comes to picking out which plants work best for the space provided.<br><br>As a gardener you will be able to keep track of which plants are in your own garden of eden, be it in an open space in your backyard or in your apartment. <br><br>Entirely free service awaits you. All you have to do is register then log in and you will be provided with a bounty of information to get you going.</p>
       </div>
       <div class="hero-image-mask"><img src="images/Kabloom-Logo.png" data-w-id="3a88c315-85a3-d737-002e-819d7e56f5ab" alt="" class="hero-image-2"></div>
     </div>
@@ -34,9 +34,11 @@
   <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="w-nav">
     <div class="w-container">
       <nav role="navigation" class="w-nav-menu">
-        <a href="#" class="w-nav-link">About</a>
-        <a href="#" class="w-nav-link">Login</a>
-        <a href="#" class="w-nav-link">Register</a>
+        @* <p>@Html.ActionLink("About Us", "AboutUs")</p> *@
+        <p class="w-nav-link">@Html.ActionLink("About Us", "AboutUs", "Home")</p>
+        <p class="w-nav-link">@Html.ActionLink("Login", "Login", "Account")</p>
+        <p class="w-nav-link">@Html.ActionLink("Register", "Register", "Account")</p>
+        
       </nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
@@ -48,43 +50,3 @@
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
-
-
-
-
-
-
-@* 
-@{
-  Layout = "_Layout";
-}
-
-<body class="body">
-  <div data-w-id="6daa22eb-30b9-2d96-cc3c-95e8d2604251" class="picture_block">
-    <div class="first"></div>
-    <div class="second"></div>
-    <div class="third"></div>
-  </div>
-  <header id="hero" class="hero-2">
-    <div class="flex-container w-container">
-      <div class="div-block">
-        <h1 class="heading">Welcome to Kabloom</h1>
-        <p class="paragraph">(name is all inclusive garden planner here to make your life easier when it comes to picking out which plants work best for the space provided.<br><br>As the gardener you will be able to keep track of which plants are in your own garden of eden, be it in an opens pace in your backyard or in your apartment. <br><br>Entirely free service awaits you. All you&#x27;ll have to do is register then log in and you will be provided with a bounty of information to get you going.</p>
-      </div>
-      <div class="hero-image-mask"><img src="images/Kabloom-Logo.png" data-w-id="3a88c315-85a3-d737-002e-819d7e56f5ab" alt="" class="hero-image-2"></div>
-    </div>
-  </header>
-  <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="w-nav">
-    <div class="w-container">
-      <nav role="navigation" class="w-nav-menu">
-        <a href="#" class="w-nav-link">About</a>
-        <a href="#" class="w-nav-link">Login</a>
-        <a href="#" class="w-nav-link">Register</a>
-      </nav>
-      <div class="w-nav-button">
-        <div class="w-icon-nav-menu"></div>
-      </div>
-    </div>
-  </div>
-</body>
- *@
