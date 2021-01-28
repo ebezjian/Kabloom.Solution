@@ -19,7 +19,7 @@ namespace KabloomClient.Models
     public Location Location { get; set; }
     public static List<LocationGroup> GetVenues()
     {
-      var searchLocation ="Portland, OR";
+      var searchLocation ="Seattle, WA";
       var apiCallTask = ApiHelper.FourSquareCall(searchLocation);
       var result = apiCallTask.Result;
 
