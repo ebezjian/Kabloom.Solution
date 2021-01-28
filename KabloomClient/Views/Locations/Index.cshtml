@@ -1,9 +1,7 @@
-<p>test</p>
+@using KabloomClient.Models;
+@model List<KabloomClient.Models.LocationGroup>
 
-@* @using KabloomClient.Models; *@
-@* @model List<KabloomClient.Models.LocationGroup> *@
-
-@* <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
+<!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Tue Jan 26 2021 23:47:54 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="600f645f221b5661d38f8688" data-wf-site="600daa2418b4568e22d87ea3">
 
@@ -34,6 +32,8 @@
       <a href="#" class="w-nav-brand"></a>
       <nav role="navigation" class="w-nav-menu">
         <p class="w-nav-link">@Html.ActionLink("Account", "Index", "Account")</p>
+        <p class="w-nav-link">@Html.ActionLink("Home", "Index", "Home")</p>
+        <p class="w-nav-link">@Html.ActionLink("Log Off", "Index", "Home")</p>
       </nav>
       <div class="w-nav-button">
         <div class="w-icon-nav-menu"></div>
@@ -62,20 +62,20 @@
           </div>
           <p>Here is a collection of nursery and other garden suppliers in your area</p>
         </div>
-        '''foreach (LocationGroup location in ViewBag.searchLocations)
+        @foreach (LocationGroup location in Model)
           {
         <div class ="row">    
           <div class="card-wrapper">
             <div data-w-id="394a9fbc-bf31-ea15-c0cd-7bd30ac59bf6" class="card">
-                <h2 class="name">Address:@location.Name</h2>
+                <h2 class="name">@location.Name</h2>
               </div>
-              <div class="card-back">
-                <h1 class="heading-3">City:@location.Location.City</h1>
-                <ul role="list" class="w-list-unstyled">
-                  <center><li class="list-item-4">State: @location.Location.State</li></center>
-                  <center><li class="list-item-3">Country: @location.Location.Country</li></center>
-                </ul>
-              </div>
+              @* <div class="card-back"> *@
+                @* <h1 class="heading-3">City:@location.Location.City</h1> *@
+                @* <ul role="list" class="w-list-unstyled"> *@
+                  @* <center><li class="list-item-4">State: @location.Location.State</li></center> *@
+                  @* <center><li class="list-item-3">Country: @location.Location.Country</li></center> *@
+                @* </ul> *@
+              @* </div> *@
             </div>
           </div>
             }
@@ -89,4 +89,4 @@
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 
-</html> *@
+</html>
