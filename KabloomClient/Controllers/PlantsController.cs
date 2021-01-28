@@ -16,7 +16,6 @@ namespace KabloomClient.Controllers
 
         public IActionResult Index()
         {
-            // ViewBag.allPlants = Plant.GetAllPlants();
             return View();
         }
 

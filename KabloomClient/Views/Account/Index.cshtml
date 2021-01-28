@@ -27,7 +27,19 @@
 </head>
 
 <body>
-
+<div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="w-nav">
+    <div class="w-container">
+      <a href="#" class="w-nav-brand"></a>
+      <nav role="navigation" class="w-nav-menu">
+        @* <p>@Html.ActionLink("About Us", "AboutUs")</p> *@
+        <p class="w-nav-link">@Html.ActionLink("Home", "Index", "Home")</p>
+        <p class="w-nav-link">@Html.ActionLink("Locations", "Index", "Locations")</p>
+      </nav>
+      <div class="w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
   <div class="w-row">
     <div class="column w-col w-col-3 w-col-small-6 w-col-tiny-6">
       <div class="nameid">
@@ -76,26 +88,21 @@
         </div>
         @foreach (Plant plant in ViewBag.allPlants)
           {
-        <div class="card-wrapper">
-          <div data-w-id="394a9fbc-bf31-ea15-c0cd-7bd30ac59bf6" class="card">
-            <div class="card-front"><img src="@plant.image_url" loading="lazy" height="" width="230" alt=""
-                class="image">
-              <h2 class="name">@plant.Common_name</h2>
-            </div>
-            <div class="card-back">
-              <h1 class="heading-3">@plant.Common_name</h1>
-              <ul role="list" class="w-list-unstyled">
-                <li class="list-item-4">@plant.Color</li>
-                <li class="list-item-3">@plant.Edible</li>
-                <li class="list-item-2">@plant.Toxicity</li>
-                <li class="list-item-2">@plant.Minimum_percipitation</li>
-                <li class="list-item-2">@plant.Maximum_percipitation</li>
-                <li class="list-item-2">@plant.Minimum_temperature</li>
-                <li class="list-item-2">@plant.Maximum_temperature</li>
-                <li class="list-item-2">@plant.Bloom_months</li>
-                <li class="list-item-2">@plant.Growth_months</li>
-                <li class="list-item-2">@plant.Growth_rate</li>
-              </ul>
+        <div class ="row">    
+          <div class="card-wrapper">
+            <div data-w-id="394a9fbc-bf31-ea15-c0cd-7bd30ac59bf6" class="card">
+              <div class="card-front"><img src="@plant.image_url" loading="lazy" height="230" width="230" alt=""
+                  class="image">
+                <h2 class="name">@plant.Common_name</h2>
+              </div>
+              <div class="card-back">
+                <h1 class="heading-3">@plant.Common_name</h1>
+                <ul role="list" class="w-list-unstyled">
+                  <center><li class="list-item-4">Scientific Name: @plant.scientific_name</li></center>
+                  <center><li class="list-item-3">Plant Family Name: @plant.family_common_name</li></center>
+                  <center><li class="list-item-2">Year Plant Was Named: @plant.year</li></center>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

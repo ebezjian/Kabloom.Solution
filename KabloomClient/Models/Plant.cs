@@ -10,22 +10,11 @@ namespace KabloomClient.Models
     public int PlantId { get; set; }
     public string Common_name { get; set; }
     public string image_url { get; set; }
+    public string author { get; set; }
+    public string scientific_name { get; set; }
+    public string family_common_name { get; set; }
+    public string year { get; set; }
 
-    public string Description { get; set; }
-    public string Color { get; set; }
-
-    public bool Vegetable { get; set; }
-    public bool Edible { get; set; }
-    public string Toxicity { get; set; }
-
-    public string Minimum_percipitation { get; set; }
-    public string Maximum_percipitation { get; set; }
-    public string Minimum_temperature { get; set; }
-    public string Maximum_temperature { get; set; }
-
-    public string Bloom_months { get; set; }
-    public string Growth_months { get; set; }
-    public string Growth_rate { get; set; }
 
     public virtual ApplicationUser User { get; set; }
 
