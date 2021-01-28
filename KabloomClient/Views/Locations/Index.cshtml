@@ -1,7 +1,9 @@
-@using KabloomClient.Models;
-@model List<KabloomClient.Models.Location>
+<p>test</p>
 
-<!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
+@* @using KabloomClient.Models; *@
+@* @model List<KabloomClient.Models.LocationGroup> *@
+
+@* <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Tue Jan 26 2021 23:47:54 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="600f645f221b5661d38f8688" data-wf-site="600daa2418b4568e22d87ea3">
 
@@ -31,7 +33,6 @@
     <div class="w-container">
       <a href="#" class="w-nav-brand"></a>
       <nav role="navigation" class="w-nav-menu">
-        @* <p>@Html.ActionLink("About Us", "AboutUs")</p> *@
         <p class="w-nav-link">@Html.ActionLink("Account", "Index", "Account")</p>
       </nav>
       <div class="w-nav-button">
@@ -61,18 +62,18 @@
           </div>
           <p>Here is a collection of nursery and other garden suppliers in your area</p>
         </div>
-        @foreach (Location location in ViewBag.GetVenues2)
+        '''foreach (LocationGroup location in ViewBag.searchLocations)
           {
         <div class ="row">    
           <div class="card-wrapper">
             <div data-w-id="394a9fbc-bf31-ea15-c0cd-7bd30ac59bf6" class="card">
-                <h2 class="name">Address:@location.Address</h2>
+                <h2 class="name">Address:@location.Name</h2>
               </div>
               <div class="card-back">
-                <h1 class="heading-3">City:@location.City</h1>
+                <h1 class="heading-3">City:@location.Location.City</h1>
                 <ul role="list" class="w-list-unstyled">
-                  <center><li class="list-item-4">State: @location.State</li></center>
-                  <center><li class="list-item-3">Country: @location.Country</li></center>
+                  <center><li class="list-item-4">State: @location.Location.State</li></center>
+                  <center><li class="list-item-3">Country: @location.Location.Country</li></center>
                 </ul>
               </div>
             </div>
@@ -88,4 +89,4 @@
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 
-</html>
+</html> *@
